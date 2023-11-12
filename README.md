@@ -7,6 +7,9 @@ Without further ado, let's get started.
 
 # Development & Editing Workspace
 First, let's get this repository set up to be worked on.
-I highly recommend using file based standards like [.editorconfig](https://editorconfig.org/) and [.devcontainer](https://containers.dev/implementors/spec/) because they can use the same source control as the root repository.
+I highly recommend using file based standards because they can dramatically reduce manual effort:
+- [.editorconfig](https://editorconfig.org/)
+- [.devcontainer](https://containers.dev/implementors/spec/)
+- [.gitignore](https://git-scm.com/docs/gitignore)
 We'll make use of those standards by editing in [VS Code](https://code.visualstudio.com/) from the web via [GitHub Codespaces](https://github.com/features/codespaces).
 Of course, if these are restricted or your preferences differ feel free to choose your own!
