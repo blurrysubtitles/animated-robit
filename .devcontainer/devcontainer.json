@@ -1,5 +1,5 @@
 {
-  "name": "devspace-robit",
+  "name": "devcontainer-robit",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {},
