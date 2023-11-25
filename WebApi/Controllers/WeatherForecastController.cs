@@ -10,16 +10,7 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
 
     private static readonly string[] _summaries =
     [
-        "Freezing",
-        "Bracing",
-        "Chilly",
-        "Cool",
-        "Mild",
-        "Warm",
-        "Balmy",
-        "Hot",
-        "Sweltering",
-        "Scorching"
+
     ];
 
     [HttpGet]
@@ -31,4 +22,18 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
             TemperatureC: Random.Shared.Next(-20, 55),
             Summary:      _summaries[Random.Shared.Next(_summaries.Length)]))
         .ToArray();
+}
+
+public enum TemperatureDescriptor
+{
+    Freezing   =  0,
+    Bracing    =  5,
+    Chilly     = 10,
+    Cool       = 15,
+    Mild       = 20,
+    Warm       = 25,
+    Balmy      = 30,
+    Hot        = 35,
+    Sweltering = 40,
+    Scorching  = 45
 }
