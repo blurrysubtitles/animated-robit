@@ -1,3 +1,6 @@
+using WebApi.Extensions;
+using WebApi.Models;
+
 namespace WebApi;
 
 public class Program
@@ -5,8 +8,6 @@ public class Program
     public static void Main(string[] args)
     {
         WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
-
-        builder.Services.AddControllers();
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
@@ -20,7 +21,11 @@ public class Program
         app.UseHttpsRedirection();
         app.UseAuthorization();
 
-        app.MapControllers();
+        app.MapGet("/WeatherForecast/", ()
+            => Enumerable
+            .Range(1, 7)
+            .Select(i => WeatherForecast.Random(DateTime.Now.AddDays(i).ToDateOnly()))
+            .ToList());
 
         app.Run();
     }
