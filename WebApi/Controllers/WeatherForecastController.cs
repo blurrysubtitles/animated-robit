@@ -8,10 +8,7 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
 {
     private readonly ILogger<WeatherForecastController> _logger = logger;
 
-    private static readonly string[] _summaries =
-    [
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    ];
+    private static readonly string[] _summaries = [ "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching" ];
 
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
