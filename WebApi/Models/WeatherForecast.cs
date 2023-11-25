@@ -13,7 +13,7 @@ public record class WeatherForecast(
         => Conversions
         .CelsiusToFahrenheit(TemperatureC);
 
-    public static WeatherForecast NewRandomWeatherForecast(DateOnly date)
+    public static WeatherForecast Random(DateOnly date)
     {
         TemperatureDescriptor temperatureDescriptor = RandomExtensions.RandomValue<TemperatureDescriptor>();
         return new WeatherForecast(date, (int)temperatureDescriptor, temperatureDescriptor.ToString());
