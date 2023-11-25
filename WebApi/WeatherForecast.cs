@@ -1,12 +1,9 @@
 namespace WebApi;
 
-public class WeatherForecast
+public record class WeatherForecast(
+    DateOnly Date,
+    int      TemperatureC,
+    string?  Summary)
 {
-    public DateOnly Date { get; set; }
-
-    public int TemperatureC { get; set; }
-
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-
-    public string? Summary { get; set; }
+    public int TemperatureF => (int)(TemperatureC / 0.5556) + 32;
 }
