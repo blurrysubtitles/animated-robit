@@ -4,14 +4,9 @@ namespace WebApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class WeatherForecastController(ILogger<WeatherForecastController> logger) : ControllerBase
 {
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
-    {
-        _logger = logger;
-    }
-
-    private readonly ILogger<WeatherForecastController> _logger;
+    private readonly ILogger<WeatherForecastController> _logger = logger;
 
     private static readonly string[] _summaries =
     [
