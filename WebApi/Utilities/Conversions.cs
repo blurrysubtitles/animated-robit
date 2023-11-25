@@ -1,4 +1,4 @@
-namespace WebApi.Extensions;
+namespace WebApi.Utilities;
 
 public static class Conversions
 {

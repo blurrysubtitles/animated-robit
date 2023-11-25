@@ -1,4 +1,4 @@
-using WebApi.Extensions;
+using WebApi.Utilities;
 
 namespace WebApi.Models;
 
@@ -8,6 +8,6 @@ public record class WeatherForecast(
     string?  Summary)
 {
     public int TemperatureF
-        => TemperatureConversions
+        => Conversions
         .CelsiusToFahrenheit(TemperatureC);
 }
