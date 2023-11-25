@@ -1,6 +1,6 @@
 using WebApi.Extensions;
 
-namespace WebApi;
+namespace WebApi.Models;
 
 public record class WeatherForecast(
     DateOnly Date,

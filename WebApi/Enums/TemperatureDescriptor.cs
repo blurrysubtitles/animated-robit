@@ -1,4 +1,4 @@
-namespace WebApi.Controllers;
+namespace WebApi.Enums;
 
 public enum TemperatureDescriptor
 {
