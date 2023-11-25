@@ -13,6 +13,9 @@ public record class WeatherForecast(
         => Conversions
         .CelsiusToFahrenheit(TemperatureC);
 
+    public WeatherForecast Next()
+        => Create(Date.AddDays(1));
+
     public static WeatherForecast Create(DateOnly date)
     {
         TemperatureDescriptor temperatureDescriptor = RandomExtensions.RandomValue<TemperatureDescriptor>();
@@ -36,7 +39,4 @@ public record class WeatherForecast(
         .Range(1, 7)
         .Select(i => InDays(i))
         .ToList();
-
-    public WeatherForecast Next
-        => Create(Date.AddDays(1));
 }
