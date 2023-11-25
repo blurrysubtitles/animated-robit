@@ -31,6 +31,12 @@ public record class WeatherForecast(
     public static WeatherForecast Tomorrow()
         => InDays(1);
 
+    public static List<WeatherForecast> ThisWeek()
+        => Enumerable
+        .Range(1, 7)
+        .Select(i => InDays(i))
+        .ToList();
+
     public WeatherForecast Next
         => Create(Date.AddDays(1));
 }

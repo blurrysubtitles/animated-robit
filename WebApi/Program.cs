@@ -20,11 +20,7 @@ public class Program
 
         app.UseHttpsRedirection();
 
-        app.MapGet("/WeatherForecast/", ()
-            => Enumerable
-            .Range(1, 7)
-            .Select(i => WeatherForecast.InDays(i))
-            .ToList());
+        app.MapGet("/WeatherForecast/", () => WeatherForecast.ThisWeek());
 
         app.Run();
     }
