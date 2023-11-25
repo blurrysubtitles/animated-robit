@@ -23,17 +23,3 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
             Summary:      _summaries[Random.Shared.Next(_summaries.Length)]))
         .ToArray();
 }
-
-public enum TemperatureDescriptor
-{
-    Freezing   =  0,
-    Bracing    =  5,
-    Chilly     = 10,
-    Cool       = 15,
-    Mild       = 20,
-    Warm       = 25,
-    Balmy      = 30,
-    Hot        = 35,
-    Sweltering = 40,
-    Scorching  = 45
-}
