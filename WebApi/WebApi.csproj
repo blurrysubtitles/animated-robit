@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>             --https://learn.microsoft.com/en-us/dotnet/standard/frameworks
-    <Nullable>enable</Nullable>                           --https://learn.microsoft.com/en-us/dotnet/csharp/nullable-references
-    <ImplicitUsings>enable</ImplicitUsings>               --https://learn.microsoft.com/en-us/dotnet/core/project-sdk/overview#implicit-using-directives
-    <InvariantGlobalization>true</InvariantGlobalization> --https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md
+    <TargetFramework>net8.0</TargetFramework>             <!-- https://learn.microsoft.com/en-us/dotnet/standard/frameworks -->
+    <Nullable>enable</Nullable>                           <!-- https://learn.microsoft.com/en-us/dotnet/csharp/nullable-references -->
+    <ImplicitUsings>enable</ImplicitUsings>               <!-- https://learn.microsoft.com/en-us/dotnet/core/project-sdk/overview#implicit-using-directives -->
+    <InvariantGlobalization>true</InvariantGlobalization> <!-- https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md -->
   </PropertyGroup>
 
   <ItemGroup>
