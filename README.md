@@ -12,6 +12,7 @@ The tools used in this project are indexed in the table below.
 That said, feel free to mix and match or use none at all - these may be unnecessary in other situations or even restricted for any number of reasons.
 
 | File Standard                                              | Example App                                                 |
+| ---------------------------------------------------------- | ----------------------------------------------------------- |
 | [.gitignore](https://git-scm.com/docs/gitignore)           | [GitHub](https://github.com/)                               |
 | [.devcontainer](https://containers.dev/implementors/spec/) | [GitHub Codespaces](https://github.com/features/codespaces) |
 | [.editorconfig](https://editorconfig.org/)                 | [VS Code](https://code.visualstudio.com/)                   |
