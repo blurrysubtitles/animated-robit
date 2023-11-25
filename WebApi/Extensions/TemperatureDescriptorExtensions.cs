@@ -1,5 +1,3 @@
-using WebApi.Enums;
-
 namespace WebApi.Extensions;
 
 public static class TemperatureDescriptorExtensions
