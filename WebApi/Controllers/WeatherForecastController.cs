@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using WebApi.Extensions;
 using WebApi.Models;
 
 namespace WebApi.Controllers;
@@ -18,6 +19,6 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
     public IEnumerable<WeatherForecast> Get()
         => Enumerable
         .Range(1, 7)
-        .Select(i => WeatherForecast.NewRandomWeatherForecast(DateOnly.FromDateTime(DateTime.Now.AddDays(i))))
+        .Select(i => WeatherForecast.NewRandomWeatherForecast(DateTime.Now.AddDays(i).ToDateOnly()))
         .ToArray();
 }
