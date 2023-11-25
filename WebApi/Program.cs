@@ -9,11 +9,14 @@ public class Program
     {
         WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-        builder.Services.AddSwaggerServices();
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
 
         WebApplication app = builder.Build();
 
-        app.UseSwaggerWithUI();
+        app.UseSwagger();
+        app.UseSwaggerUI();
+
         app.UseHttpsRedirection();
 
         app.MapGet("/WeatherForecast/", () => WeatherForecast.ThisWeek());

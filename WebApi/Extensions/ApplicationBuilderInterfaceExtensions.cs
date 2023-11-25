@@ -6,12 +6,14 @@ namespace WebApi.Extensions;
 public static class ApplicationBuilderInterfaceExtensions
 {
     public static IApplicationBuilder UseSwaggerWithUI(this IApplicationBuilder applicationBuilder, SwaggerOptions swaggerOptions, SwaggerUIOptions swaggerUIOptions)
-        => applicationBuilder
-        .UseSwagger(swaggerOptions)
-        .UseSwaggerUI(swaggerUIOptions);
+        => throw new NotImplementedException();
+        //=> applicationBuilder
+        //.UseSwagger(swaggerOptions)
+        //.UseSwaggerUI(swaggerUIOptions);
 
     public static IApplicationBuilder UseSwaggerWithUI(this IApplicationBuilder applicationBuilder, Action<SwaggerOptions>? swaggerSetupAction = null, SwaggerUIOptions? swaggerUIAction = null)
-        => applicationBuilder
-        .UseSwagger(swaggerSetupAction)
-        .UseSwaggerUI(swaggerUIAction);
+        => throw new NotImplementedException();
+        //=> applicationBuilder
+        //.UseSwagger(swaggerSetupAction)
+        //.UseSwaggerUI(swaggerUIAction);
 }
