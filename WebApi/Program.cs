@@ -23,7 +23,7 @@ public class Program
         app.MapGet("/WeatherForecast/", ()
             => Enumerable
             .Range(1, 7)
-            .Select(i => WeatherForecast.Random(DateOnlyExtensions.TodayPlus(days: i)))
+            .Select(i => WeatherForecast.InDays(i))
             .ToList());
 
         app.Run();
