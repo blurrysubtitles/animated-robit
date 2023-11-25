@@ -18,9 +18,6 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
     public IEnumerable<WeatherForecast> Get()
         => Enumerable
         .Range(1, 7)
-        .Select(i => new WeatherForecast(
-            Date:         DateOnly.FromDateTime(DateTime.Now.AddDays(i)),
-            TemperatureC: Random.Shared.Next(-20, 55),
-            Summary:      _summaries[Random.Shared.Next(_summaries.Length)]))
+        .Select(i => WeatherForecast.NewRandomWeatherForecast(DateOnly.FromDateTime(DateTime.Now.AddDays(i))))
         .ToArray();
 }
