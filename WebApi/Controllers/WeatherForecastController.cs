@@ -10,11 +10,6 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
 {
     private readonly ILogger<WeatherForecastController> _logger = logger;
 
-    private static readonly string[] _summaries =
-    [
-
-    ];
-
     [HttpGet]
     public IEnumerable<WeatherForecast> Get()
         => Enumerable
