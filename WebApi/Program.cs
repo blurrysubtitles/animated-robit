@@ -19,7 +19,7 @@ public class Program
 
         app.UseHttpsRedirection();
 
-        app.MapGet("/WeatherForecast/", () => WeatherForecast.ThisWeek());
+        app.MapGet("/WeatherForecast/", () => WeatherForecast.ThisWeek()).WithName("GetWeatherForecast").WithOpenApi();
 
         app.Run();
     }
